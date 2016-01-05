@@ -1,7 +1,13 @@
-# Icon pack support for Sailfish OS
+# Theme pack support for Sailfish OS
 
-Icon pack support in Sailfish OS.
+Theme pack support in Sailfish OS.
 
-## Icon packs
+## Create custom theme packs
 
-Wiki on how to correctly hook icon packs available [here](https://github.com/fravaccaro/icon-pack-support-for-sailfish-os/wiki/Create-icon-packs).
+Wiki on how to correctly hook theme packs available [here](https://github.com/fravaccaro/themepacksupport-sailfishos/wiki/Get-started).
+
+## Side notes
+
+The script works replacing default elements with custom ones and enables safe backup/restore. I chose this approach as no proper documentation on theming support in Sailfish OS has been found yet.
+
+However, a rudimentary theme support may have been already built-in, since I found jolla-ambient folders to have an index.theme package and dconf to have values for those themes. Further investigation is needed.
