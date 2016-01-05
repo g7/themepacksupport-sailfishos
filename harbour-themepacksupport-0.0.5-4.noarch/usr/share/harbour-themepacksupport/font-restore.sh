@@ -51,6 +51,7 @@ fi
 if [ "$(ls $main/backup/font-droid)" ]; then
 	rm -rf $main/backup/font-droid/*
 fi
+
 # Set no font pack
 rm $main/font-current
 echo default > $main/font-current

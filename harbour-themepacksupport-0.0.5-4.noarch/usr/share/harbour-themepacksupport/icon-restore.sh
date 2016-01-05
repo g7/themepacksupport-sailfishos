@@ -76,6 +76,36 @@ if [ -d "/usr/share/harbour-dynclock" ]; then
 	fi
 fi
 
+# Remove backuped Jolla icons
+if [ "$(ls $main/backup/jolla)" ]; then
+	rm $main/backup/jolla/*
+fi
+# Remove backuped native icons
+	if [ "$(ls $main/backup/native)" ]; then
+rm $main/backup/native/*
+fi
+# If Android support is installed
+if [ -d "$dir_apk" ]; then
+	# Remove backuped Android icons
+	if [ "$(ls $main/backup/apk)" ]; then
+		rm $main/backup/apk/*
+	fi
+fi
+# If DynCal is installed
+if [ -d "/usr/share/harbour-dyncal" ]; then
+	# Remove backuped DynCal icons
+	if [ "$(ls $main/backup/dyncal)" ]; then
+		rm $main/backup/dyncal/*
+	fi
+fi
+# If DynClock is installed
+if [ -d "/usr/share/harbour-dynclock" ]; then
+	# Remove backuped DynClock icons
+	if [ "$(ls $main/backup/dynclock)" ]; then
+		rm $main/backup/dynclock/*
+	fi
+fi
+
 # Clean tmp directory
 rm $main/tmp/*
 

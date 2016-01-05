@@ -22,16 +22,6 @@ main=/usr/share/harbour-themepacksupport
 dir_jolla=/usr/share/fonts
 dir_apk=/opt/alien/system/fonts
 
-# Remove backuped Jolla fonts
-if [ "$(ls $main/backup/font)" ]; then
-	rm -rf $main/backup/font/*
-fi
-
-# Remove backuped Android fonts
-if [ "$(ls $main/backup/font-droid)" ]; then
-	rm -rf $main/backup/font-droid/*
-fi
-
 # Copy Jolla fonts
 cp -R $dir_jolla/* $main/backup/font/
 

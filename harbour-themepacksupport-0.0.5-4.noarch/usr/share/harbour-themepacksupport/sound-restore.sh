@@ -28,6 +28,9 @@ if [ "$(ls $main/backup/sound)" ]; then
 # Restore Jolla sounds
 cp $main/backup/sound/* $dir_jolla
 
+# Remove backuped Jolla sounds
+rm $main/backup/sound/*
+
 # Set no sound pack
 rm $main/sound-current
 echo default > $main/sound-current

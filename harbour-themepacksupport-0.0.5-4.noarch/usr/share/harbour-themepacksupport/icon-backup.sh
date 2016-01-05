@@ -23,36 +23,6 @@ dir_jolla=/usr/share/themes/jolla-ambient/meegotouch/z1.0/icons
 dir_native=/usr/share/icons/hicolor/86x86/apps
 dir_apk=/var/lib/apkd
 
-# Remove backuped Jolla icons
-if [ "$(ls $main/backup/jolla)" ]; then
-	rm $main/backup/jolla/*
-fi
-# Remove backuped native icons
-	if [ "$(ls $main/backup/native)" ]; then
-rm $main/backup/native/*
-fi
-# If Android support is installed
-if [ -d "$dir_apk" ]; then
-	# Remove backuped Android icons
-	if [ "$(ls $main/backup/apk)" ]; then
-		rm $main/backup/apk/*
-	fi
-fi
-# If DynCal is installed
-if [ -d "/usr/share/harbour-dyncal" ]; then
-	# Remove backuped DynCal icons
-	if [ "$(ls $main/backup/dyncal)" ]; then
-		rm $main/backup/dyncal/*
-	fi
-fi
-# If DynClock is installed
-if [ -d "/usr/share/harbour-dynclock" ]; then
-	# Remove backuped DynClock icons
-	if [ "$(ls $main/backup/dynclock)" ]; then
-		rm $main/backup/dynclock/*
-	fi
-fi
-
 # List Jolla icons
 ls $dir_jolla > $main/tmp/jolla
 # Copy selected Jolla icons

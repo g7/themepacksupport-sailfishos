@@ -21,11 +21,6 @@
 main=/usr/share/harbour-themepacksupport
 dir_jolla=/usr/share/sounds/jolla-ambient/stereo
 
-# Remove backuped Jolla sounds
-if [ "$(ls $main/backup/sound)" ]; then
-	rm $main/backup/sound/*
-fi
-
 # Copy Jolla sounds
 cp $dir_jolla/* $main/backup/sound/
 
