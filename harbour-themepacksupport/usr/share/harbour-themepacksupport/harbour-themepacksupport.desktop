@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Themes
+Name[it]=Temi
+Exec=fingerterm -e "devel-su -c /usr/share/harbour-themepacksupport/themepacksupport.sh"
+Icon=harbour-themepacksupport
+X-Nemo-Single-Instance=no
