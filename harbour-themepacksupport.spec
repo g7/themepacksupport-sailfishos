@@ -1,6 +1,6 @@
 Name:          harbour-themepacksupport
-Version:       0.0.5
-Release:       5
+Version:       0.0.6
+Release:       1
 Summary:       Theme pack support
 Obsoletes:     harbour-iconpacksupport <= 0.0.4-4
 Conflicts:     harbour-iconpacksupport
@@ -44,6 +44,9 @@ fi
 fi
 
 %changelog
+* Fri Jan 8 2016 0.0.6
+- Non-latin fonts kept.
+
 * Wed Dec 30 2015 0.0.4
 - Added Jolla Ambient support.
 

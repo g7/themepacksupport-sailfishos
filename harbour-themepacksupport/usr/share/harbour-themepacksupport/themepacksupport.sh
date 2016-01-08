@@ -33,11 +33,6 @@ find harbour-themepack-* -maxdepth 1 -type d -iname "native" -printf "%h\n" | so
 find harbour-themepack-* -maxdepth 1 -type d -iname "apk" -printf "%h\n" | sort -u | cut -c19- > $main/tmp/icon-tmp3
 find harbour-themepack-* -maxdepth 1 -type d -iname "dyncal" -printf "%h\n" | sort -u | cut -c19- > $main/tmp/icon-tmp4
 find harbour-themepack-* -maxdepth 1 -type d -iname "dynclock" -printf "%h\n" | sort -u | cut -c19- > $main/tmp/icon-tmp5
-find harbour-iconpack-* -maxdepth 1 -type d -iname "jolla" -printf "%h\n" | sort -u | cut -c19- > $main/tmp/icon-tmp6
-find harbour-iconpack-* -maxdepth 1 -type d -iname "native" -printf "%h\n" | sort -u | cut -c18- > $main/tmp/icon-tmp7
-find harbour-iconpack-* -maxdepth 1 -type d -iname "apk" -printf "%h\n" | sort -u | cut -c18- > $main/tmp/icon-tmp8
-find harbour-iconpack-* -maxdepth 1 -type d -iname "dyncal" -printf "%h\n" | sort -u | cut -c18- > $main/tmp/icon-tmp9
-find harbour-iconpack-* -maxdepth 1 -type d -iname "dynclock" -printf "%h\n" | sort -u | cut -c18- > $main/tmp/icon-tmp10
 cat $main/tmp/icon-tmp* | sort | uniq > $main/icon.menu
 find harbour-themepack-* -maxdepth 1 -type d -iname "font" -printf "%h\n" | sort -u | cut -c19- > $main/tmp/font-tmp1
 find harbour-themepack-* -maxdepth 1 -type d -iname "font-droid" -printf "%h\n" | sort -u | cut -c19- > $main/tmp/font-tmp2

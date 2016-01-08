@@ -37,16 +37,8 @@ if [ "$(ls $main/backup/font)" -o "$(ls $main/backup/font-droid)" ]; then
 
 # Check if there are Jolla fonts
 if [ -d "$pack/font" ]; then
-	# List fonts
-	ls $dir_jolla > $main/tmp/font
-	cd $pack/font; ls *.ttf > $main/font
-	# Keep Sailfish emojis if installed
-	sed -i "/custom/d" $main/tmp/font
-	sed -i "/droid/d" $main/tmp/font
-	# Delete the other fonts
-	for file in $(<$main/tmp/font); do rm -rf "$dir_jolla/$file"; done
 	# Copy selected Jolla font pack
-	cp $pack/font/*.ttf $dir_jolla/
+	cp $pack/font/*.ttf $dir_jolla/sail-sans-pro
 fi
 
 # If Android support is installed

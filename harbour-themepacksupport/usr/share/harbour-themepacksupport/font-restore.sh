@@ -25,21 +25,13 @@ dir_apk=/opt/alien/system/fonts
 # Check if a backup has been performed
 if [ "$(ls $main/backup/font)" -o "$(ls $main/backup/font-droid)" ]; then
 
-# Delete custom fonts
-for file in $(<$main/font); do rm -rf "$dir_jolla/$file"; done
-for file in $(<$main/font-droid); do rm rm -rf "$dir_apk/$file"; done
-rm $main/font
-rm $main/font-droid
-
 # Restore Jolla fonts
-cp -R $main/backup/font/sail-sans-pro $dir_jolla/
-fc-cache -fv
 cp -R $main/backup/font/* $dir_jolla/
 
 # If Android support is installed
 if [ -d "$dir_apk" ]; then
 	# Restore Android fonts
-	cp -R $main/backup/font-droid/* $dir_apk/
+	yes | cp $main/backup/font-droid/*.ttf $dir_apk/
 fi
 
 # Remove backuped Jolla fonts
