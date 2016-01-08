@@ -31,7 +31,7 @@ cp -R $main/backup/font/* $dir_jolla/
 # If Android support is installed
 if [ -d "$dir_apk" ]; then
 	# Restore Android fonts
-	yes | cp $main/backup/font-droid/*.ttf $dir_apk/
+	cp -rf $main/backup/font-droid/*.ttf $dir_apk/
 fi
 
 # Remove backuped Jolla fonts

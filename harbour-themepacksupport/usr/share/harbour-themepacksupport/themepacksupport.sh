@@ -65,8 +65,8 @@ EOF
     "H"|"h")  echo "Refresh the homescreen? y/N? "
 		read -n1 -s choice
 		case "$choice" in 
-		y|Y ) systemctl-user restart lipstick.service
-		echo "Your homescreen will be restarted...done!"; sleep 1 ;;
+		y|Y ) 	echo "Your homescreen will be restarted..."
+		systemctl-user restart lipstick.service; echo "done!"; sleep 1 ;;
 		* ) echo "aborted"; sleep 1 ;;
 		esac ;;
     "G"|"g")  clear
